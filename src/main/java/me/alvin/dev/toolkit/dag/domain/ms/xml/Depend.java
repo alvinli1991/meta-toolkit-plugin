@@ -12,7 +12,7 @@ public interface Depend extends com.intellij.util.xml.DomElement {
     @Attribute("id")
     GenericAttributeValue<String> getDependId();
 
-    default String getStageName() {
-        return getDependId().getValue() + "_stage";
-    }
+//    default String getStageName() {
+//        return getDependId().getValue() + "_stage";
+//    }
 }

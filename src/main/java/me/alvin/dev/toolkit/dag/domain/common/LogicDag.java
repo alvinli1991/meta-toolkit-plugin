@@ -26,12 +26,6 @@ public class LogicDag {
         this.edgeIdMap = new HashMap<>();
     }
 
-    public GraphDag transfer() {
-        GraphDag graphDag = new GraphDag(getId() + "-graph");
-        //TODO transfer
-
-        return graphDag;
-    }
 
     public String getId() {
         return id;

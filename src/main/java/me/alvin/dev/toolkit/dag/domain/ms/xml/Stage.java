@@ -11,13 +11,16 @@ import com.intellij.util.xml.GenericAttributeValue;
 public interface Stage extends com.intellij.util.xml.DomElement {
 
     @Attribute("id")
-    GenericAttributeValue<String> getStageId();
+    GenericAttributeValue<String> getStageName();
+
+    //    @Attribute("desc")
+    GenericAttributeValue<String> getStageDesc();
 
     Flows getFlows();
 
     Depends getDepends();
 
-    default String getStageName() {
-        return getStageId().getValue() + "_stage";
+    default String getStageId() {
+        return getStageName().getValue() + "_stage";
     }
 }

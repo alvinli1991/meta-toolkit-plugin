@@ -4,10 +4,8 @@ import lombok.*;
 import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * @author: Li Xiang
@@ -20,9 +18,21 @@ import java.util.Optional;
 @Data
 public class State implements Plantuml {
     private String name;
-    private String desc;
+
+    @Singular(value = "description")
+    private Map<String, String> descriptions;
+
     @Singular(value = "child")
     private List<State> children;
+
+    public List<String> getDesc() {
+        return Optional.ofNullable(descriptions)
+                .map(Map::entrySet)
+                .orElse(Collections.emptySet())
+                .stream()
+                .map(entry -> entry.getKey() + ":" + entry.getValue())
+                .collect(Collectors.toList());
+    }
 
     public String buildStart() {
         List<String> tokens = new ArrayList<>();
@@ -46,8 +56,12 @@ public class State implements Plantuml {
     public String toPlantuml() {
         List<String> tokens = new ArrayList<>();
         tokens.add(buildStart());
-        if (StringUtils.isNotBlank(getDesc())) {
-            tokens.add(getName() + ":" + getDesc());
+
+        if (CollectionUtils.isNotEmpty(getDesc())) {
+            getDesc().forEach(desc -> {
+                tokens.add(getName() + ":" + desc);
+            });
+
         }
         tokens.addAll(Optional.ofNullable(children)
                 .orElse(Collections.emptyList())

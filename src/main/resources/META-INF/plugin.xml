@@ -10,6 +10,9 @@
 
     <extensions defaultExtensionNs="com.intellij">
         <toolWindow factoryClass="com.github.alvinli1991.metatoolkitplugin.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
+
+        <projectService serviceInterface="me.alvin.dev.toolkit.dag.service.DagPlantumlStateService"
+                        serviceImplementation="me.alvin.dev.toolkit.dag.service.impl.MsDagPlantumlStateService"/>
     </extensions>
 
     <applicationListeners>

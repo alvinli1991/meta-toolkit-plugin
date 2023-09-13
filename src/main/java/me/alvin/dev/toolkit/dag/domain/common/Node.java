@@ -1,9 +1,11 @@
 package me.alvin.dev.toolkit.dag.domain.common;
 
-import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.collections4.MapUtils;
 
-import java.util.*;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
 
 /**
  * @author: Li Xiang
@@ -14,7 +16,6 @@ public class Node {
 
     private final String id;
     private final Map<String, String> data;
-    private final Set<Node> children;
     private String type;
     private String desc;
 
@@ -24,7 +25,6 @@ public class Node {
         this.type = type;
         this.desc = desc;
         this.data = new HashMap<>();
-        this.children = new HashSet<>();
     }
 
     public Node(String id, String type, Map<String, String> data) {
@@ -61,24 +61,6 @@ public class Node {
         this.desc = desc;
     }
 
-    public boolean addChild(Node node) {
-        if (Objects.isNull(node)) {
-            return false;
-        }
-        return this.children.add(node);
-    }
-
-    public void addChildren(Collection<? extends Node> nodes) {
-        if (CollectionUtils.isEmpty(nodes)) {
-            return;
-        }
-        this.children.addAll(nodes);
-    }
-
-
-    public Set<Node> getChildren() {
-        return Collections.unmodifiableSet(this.children);
-    }
 
     public String putData(String key, String value) {
         if (Objects.isNull(key)) {
@@ -105,6 +87,9 @@ public class Node {
         return Collections.unmodifiableMap(this.data);
     }
 
+    public boolean containData(String key) {
+        return this.data.containsKey(key);
+    }
 
     @Override
     public boolean equals(Object o) {

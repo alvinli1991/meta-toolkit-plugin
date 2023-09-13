@@ -24,10 +24,10 @@ repositories {
 // Dependencies are managed with Gradle version catalog - read more: https://docs.gradle.org/current/userguide/platforms.html#sub:version-catalog
 dependencies {
 //    implementation(libs.annotations)
-    testImplementation("org.junit.jupiter:junit-jupiter:5.9.2")
-    testCompileOnly("junit:junit:4.13.1")
-    testRuntimeOnly("org.junit.vintage:junit-vintage-engine")
-    testImplementation("org.hamcrest:hamcrest:2.2")
+//    testImplementation("org.junit.jupiter:junit-jupiter:5.9.2")
+//    testCompileOnly("junit:junit:4.13.1")
+//    testRuntimeOnly("org.junit.vintage:junit-vintage-engine")
+//    testImplementation("org.hamcrest:hamcrest:2.2")
     implementation("com.fasterxml.jackson.core:jackson-databind:2.14.2")
     implementation("com.fasterxml.jackson.core:jackson-core:2.14.2")
     implementation("com.fasterxml.jackson.core:jackson-annotations:2.14.2")
