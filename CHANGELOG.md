@@ -2,7 +2,10 @@
 
 # metadata-toolkit-plugin Changelog
 
-## [0.0.1]
+## [Unreleased]
+
+## [0.0.1] - 2021-09-01
+
 ### Added
 
 - Transform the LPP XML to plantUML State 
