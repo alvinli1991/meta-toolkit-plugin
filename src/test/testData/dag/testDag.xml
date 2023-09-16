@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DagGraph id="efGPoi">
+    <units>
+        <unit>
+            <id>initPropertiesNode</id>
+            <clz>me.example.test.init.InitPropertiesNode</clz>
+            <description>aaa</description>
+        </unit>
+        <unit>
+            <id>initExampleAbExpNode</id>
+            <clz>me.example.test.init.InitExampleAbExpNode</clz>
+            <description>bbb</description>
+        </unit>
+        <unit>
+            <id>controlStressFlowNode</id>
+            <clz>me.example.test.check.ControlStressFlowNode</clz>
+            <description>ccc</description>
+        </unit>
+        <unit>
+            <id>controlBlankFlowNode</id>
+            <clz>me.example.test.check.ControlBlankFlowNode</clz>
+            <description>ddd</description>
+        </unit>
+        <unit>
+            <id>controlDefaultGpsNode</id>
+            <clz>me.example.test.check.ControlDefaultGpsNode</clz>
+            <description>eee</description>
+        </unit>
+        <unit>
+            <id>controlOutLandPhoneNode</id>
+            <clz>me.example.test.check.ControlOutLandPhoneNode</clz>
+            <description>fff</description>
+        </unit>
+        <unit>
+            <id>controlGrayCityNode</id>
+            <clz>me.example.test.check.ControlGrayCityNode</clz>
+            <description>ggg</description>
+        </unit>
+        <unit>
+            <id>controlVersionNode</id>
+            <clz>me.example.test.check.ControlVersionNode</clz>
+            <description>hhh</description>
+        </unit>
+        <unit>
+            <id>initUserProfileNode</id>
+            <clz>me.example.test.init.InitUserProfileNode</clz>
+            <description>i</description>
+        </unit>
+        <unit>
+            <id>initBizFuncSwitchNode</id>
+            <clz>me.example.test.init.InitBizFuncSwitchNode</clz>
+            <description>j</description>
+        </unit>
+        <unit>
+            <id>abcAsyncPoiRecallNode</id>
+            <clz>me.example.test.recall.AbcAsyncPoiRecallNode</clz>
+            <description>k</description>
+        </unit>
+        <unit>
+            <id>abcPoiRecallResultGetNode</id>
+            <clz>me.example.test.recall.AbcPoiRecallResultGetNode</clz>
+            <description>l</description>
+        </unit>
+        <unit>
+            <id>recallMergeNode</id>
+            <clz>me.example.test.recall.RecallMergeNode</clz>
+            <description>m</description>
+        </unit>
+        <unit>
+            <id>invalidPoiFilterNode</id>
+            <clz>me.example.test.recall.InvalidPoiFilterNode</clz>
+            <description>n</description>
+        </unit>
+        <unit>
+            <id>cpmMultiUnitFilterNode</id>
+            <clz>me.example.test.recall.CpmMultiUnitFilterNode</clz>
+            <description>o</description>
+        </unit>
+        <unit>
+            <id>recallCoarseSortAndCutNode</id>
+            <clz>me.example.test.recall.RecallCoarseSortAndCutNode</clz>
+            <description>p</description>
+        </unit>
+        <unit>
+            <id>materialAsyncRecallNode</id>
+            <clz>me.example.test.recall.MaterialAsyncRecallNode</clz>
+            <description>q</description>
+        </unit>
+        <unit>
+            <id>abcSyncBidNode</id>
+            <clz>me.example.test.predict.AbcSyncBidNode</clz>
+            <description>r</description>
+        </unit>
+        <unit>
+            <id>budgeSmoothAsyncRecallNode</id>
+            <clz>me.example.test.recall.BudgeSmoothAsyncRecallNode</clz>
+            <description>s</description>
+        </unit>
+        <unit>
+            <id>skuAsyncMultirecallNode</id>
+            <clz>me.example.test.recall.SkuAsyncMultirecallNode</clz>
+            <description>t</description>
+        </unit>
+        <unit>
+            <id>cpmRecallAsyncRecallNode</id>
+            <clz>me.example.test.recall.CpmRecallAsyncRecallNode</clz>
+            <description>u</description>
+        </unit>
+        <unit>
+            <id>recallResultGetNode</id>
+            <clz>me.example.test.recall.RecallResultGetNode</clz>
+            <description>v</description>
+        </unit>
+        <unit>
+            <id>cpmPredictPrepareNode</id>
+            <clz>me.example.test.predict.CpmPredictPrepareNode</clz>
+            <description>w</description>
+        </unit>
+        <unit>
+            <id>adCoPredictNode</id>
+            <clz>me.example.test.predict.AdCoPredictNode</clz>
+            <description>x</description>
+        </unit>
+        <unit>
+            <id>cpmRankScoreCalculateNode</id>
+            <clz>me.example.test.predict.CpmRankScoreCalculateNode</clz>
+            <description>y</description>
+        </unit>
+        <unit>
+            <id>skuUniqueCategoryNode</id>
+            <clz>me.example.test.optimize.SkuUniqueCategoryNode</clz>
+            <description>z</description>
+        </unit>
+        <unit>
+            <id>skuAsyncMultirecallConsumeNode</id>
+            <clz>me.example.test.recall.SkuAsyncMultirecallConsumeNode</clz>
+            <description>o</description>
+        </unit>
+        <unit>
+            <id>abcAsyncBidNode</id>
+            <clz>me.example.test.predict.AbcAsyncBidNode</clz>
+            <description>g</description>
+        </unit>
+        <unit>
+            <id>abcBidResultGetNode</id>
+            <clz>me.example.test.predict.AbcBidResultGetNode</clz>
+            <description>DDD</description>
+        </unit>
+        <unit>
+            <id>gmvThresholdNode</id>
+            <clz>me.example.test.sort.GmvThresholdNode</clz>
+            <description>lsdaf</description>
+        </unit>
+        <unit>
+            <id>budgeSmoothPerformNode</id>
+            <clz>me.example.test.sort.BudgeSmoothPerformNode</clz>
+            <description>daf</description>
+        </unit>
+        <unit>
+            <id>flowOptiSmoothPerformNode</id>
+            <clz>me.example.test.sort.FlowOptiSmoothPerformNode</clz>
+            <description>ldsfg</description>
+        </unit>
+        <unit>
+            <id>fineSortByWeightNode</id>
+            <clz>me.example.test.sort.FineSortByWeightNode</clz>
+            <description>ldl</description>
+        </unit>
+        <unit>
+            <id>efGBidPrepareNode</id>
+            <clz>me.example.test.bid.NewHomePageBidPrepareNode</clz>
+            <description>dsaf</description>
+        </unit>
+        <unit>
+            <id>smartBidOcpmTuneBidNode</id>
+            <clz>me.example.test.optimize.SmartBidOcpmTuneBidNode</clz>
+            <description>dsaf</description>
+        </unit>
+        <unit>
+            <id>cpmBlackOcpmTuneBidNode</id>
+            <clz>me.example.test.optimize.CpmBlackOcpmTuneBidNode</clz>
+            <description>sdaf</description>
+        </unit>
+        <unit>
+            <id>cpmOptimizeCutNode</id>
+            <clz>me.example.test.optimize.CpmOptimizeCutNode</clz>
+            <description>sdaf</description>
+        </unit>
+        <unit>
+            <id>materialInfoGetNode</id>
+            <clz>me.example.test.optimize.MaterialInfoGetNode</clz>
+            <description>afi</description>
+        </unit>
+        <unit>
+            <id>invalidMaterialFilterNode</id>
+            <clz>me.example.test.optimize.InvalidMaterialFilterNode</clz>
+            <description>sdaf</description>
+        </unit>
+        <unit>
+            <id>brandUniqueNode</id>
+            <clz>me.example.test.optimize.BrandUniqueNode</clz>
+            <description>dsafd</description>
+        </unit>
+        <unit>
+            <id>efGPoiCutNode</id>
+            <clz>me.example.test.render.NewHomePagePoiCutNode</clz>
+            <description>jdsaf</description>
+        </unit>
+        <unit>
+            <id>efGPoiResultBuildNode</id>
+            <clz>me.example.test.render.NewHomePagePoiResultBuildNode</clz>
+            <description>dfe</description>
+        </unit>
+        <unit>
+            <id>efGPoiLogNode</id>
+            <clz>me.example.test.log.NewHomePagePoiLogNode</clz>
+            <description>xdfad</description>
+        </unit>
+    </units>
+    <stages>
+        <stage id="init">
+            <flows>
+                <flow from="initPropertiesNode" to="initExampleAbExpNode"/>
+            </flows>
+        </stage>
+        <stage id="check">
+            <depends>
+                <depend id="init"/>
+            </depends>
+            <flows>
+                <flow from="controlStressFlowNode" to="controlBlankFlowNode"/>
+                <flow from="controlBlankFlowNode" to="controlDefaultGpsNode"/>
+                <flow from="controlDefaultGpsNode" to="controlOutLandPhoneNode"/>
+                <flow from="controlOutLandPhoneNode" to="controlGrayCityNode"/>
+                <flow from="controlGrayCityNode" to="controlVersionNode"/>
+            </flows>
+        </stage>
+        <stage id="bizInit">
+            <depends>
+                <depend id="check"/>
+            </depends>
+            <flows>
+                <flow from="initUserProfileNode" to=""/>
+                <flow from="initBizFuncSwitchNode" to=""/>
+            </flows>
+        </stage>
+        <stage id="recall">
+            <depends>
+                <depend id="bizInit"/>
+            </depends>
+            <flows>
+                <flow from="abcAsyncPoiRecallNode" to="abcPoiRecallResultGetNode"/>
+                <flow from="abcPoiRecallResultGetNode" to="recallMergeNode"/>
+                <flow from="recallMergeNode" to="invalidPoiFilterNode"/>
+                <flow from="invalidPoiFilterNode" to="cpmMultiUnitFilterNode"/>
+                <flow from="cpmMultiUnitFilterNode" to="recallCoarseSortAndCutNode"/>
+                <flow from="recallCoarseSortAndCutNode" to="materialAsyncRecallNode"/>
+                <flow from="recallCoarseSortAndCutNode" to="abcSyncBidNode"/>
+                <flow from="recallCoarseSortAndCutNode" to="budgeSmoothAsyncRecallNode"/>
+                <flow from="recallCoarseSortAndCutNode" to="skuAsyncMultirecallNode"/>
+                <flow from="cpmRecallAsyncRecallNode" to="recallResultGetNode"/>
+                <flow from="recallResultGetNode" to="recallMergeNode"/>
+            </flows>
+        </stage>
+        <stage id="predict">
+            <depends>
+                <depend id="recall"/>
+            </depends>
+            <flows>
+                <flow from="cpmPredictPrepareNode" to="adCoPredictNode"/>
+                <flow from="adCoPredictNode" to="cpmRankScoreCalculateNode"/>
+                <flow from="adCoPredictNode" to="skuUniqueCategoryNode"/>
+                <flow from="skuAsyncMultirecallConsumeNode" to="adCoPredictNode"/>
+                <flow from="abcAsyncBidNode" to="abcBidResultGetNode"/>
+                <flow from="abcBidResultGetNode" to="cpmRankScoreCalculateNode"/>
+            </flows>
+        </stage>
+        <stage id="sort">
+            <depends>
+                <depend id="predict"/>
+            </depends>
+            <flows>
+                <flow from="gmvThresholdNode" to="budgeSmoothPerformNode"/>
+                <flow from="budgeSmoothPerformNode" to="flowOptiSmoothPerformNode"/>
+                <flow from="flowOptiSmoothPerformNode" to="fineSortByWeightNode"/>
+            </flows>
+        </stage>
+        <stage id="bid">
+            <depends>
+                <depend id="sort"/>
+            </depends>
+            <flows>
+                <flow from="efGBidPrepareNode" to=""/>
+            </flows>
+        </stage>
+        <stage id="optimize">
+            <depends>
+                <depend id="bid"/>
+            </depends>
+            <flows>
+                <flow from="smartBidOcpmTuneBidNode" to="cpmBlackOcpmTuneBidNode"/>
+                <flow from="cpmBlackOcpmTuneBidNode" to="cpmOptimizeCutNode"/>
+                <flow from="cpmOptimizeCutNode" to="materialInfoGetNode"/>
+                <flow from="materialInfoGetNode" to="invalidMaterialFilterNode"/>
+                <flow from="invalidMaterialFilterNode" to="brandUniqueNode"/>
+            </flows>
+        </stage>
+        <stage id="render">
+            <depends>
+                <depend id="optimize"/>
+            </depends>
+            <flows>
+                <flow from="efGPoiCutNode" to="efGPoiResultBuildNode"/>
+            </flows>
+        </stage>
+        <stage id="log">
+            <depends>
+                <depend id="render"/>
+            </depends>
+            <flows>
+                <flow from="efGPoiLogNode" to=""/>
+            </flows>
+        </stage>
+    </stages>
+</DagGraph>

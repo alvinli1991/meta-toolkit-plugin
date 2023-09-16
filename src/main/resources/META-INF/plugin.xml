@@ -1,6 +1,6 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
-    <id>com.github.alvinli1991.metatoolkitplugin</id>
+    <id>com.github.alvinli1991.metadata.toolkit</id>
     <name>Meta Toolkit Template</name>
     <vendor>alvinli1991</vendor>
 
@@ -9,15 +9,37 @@
     <resource-bundle>messages.MyBundle</resource-bundle>
 
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.alvinli1991.metatoolkitplugin.toolWindow.MyToolWindowFactory"
+        <toolWindow factoryClass="com.github.alvinli1991.metadata.toolkit.toolWindow.MyToolWindowFactory"
                     id="MyToolWindow"/>
 
-        <projectService serviceInterface="me.alvin.dev.toolkit.dag.service.DagPlantumlStateService"
-                        serviceImplementation="me.alvin.dev.toolkit.dag.service.impl.MsDagPlantumlStateService"/>
+        <projectService serviceInterface="com.github.alvinli1991.metadata.toolkit.dag.service.DagPlantumlStateService"
+                        serviceImplementation="com.github.alvinli1991.metadata.toolkit.dag.service.impl.MsDagPlantumlStateService"/>
+
+        <dom.fileMetaData
+                implementation="com.github.alvinli1991.metadata.toolkit.dag.domain.ms.xml.DagGraphDomFileDescription"
+                rootTagName="DagGraph"/>
+
+        <notificationGroup id="Meta Data Toolkit" displayType="BALLOON" key="projectService"/>
     </extensions>
 
     <applicationListeners>
-        <listener class="com.github.alvinli1991.metatoolkitplugin.listeners.MyApplicationActivationListener"
+        <listener class="com.github.alvinli1991.metadata.toolkit.listeners.MyApplicationActivationListener"
                   topic="com.intellij.openapi.application.ApplicationActivationListener"/>
     </applicationListeners>
+    <actions>
+        <group id="me.alvin.dev.toolkit.MetadataGroupedActions"
+               text="Metadata Toolkit"
+               icon="ToolkitIcons.M_icon"
+               popup="true">
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="last"/>
+            <action id="com.github.alvinli1991.metadata.toolkit.action.MsXmlToPlantumlState2Action"
+                    class="com.github.alvinli1991.metadata.toolkit.action.MsXmlToPlantumlState2Action"
+                    text="LPP Xml to PlantUML"
+                    icon="ToolkitIcons.L_icon"
+                    description="Transfer xml to plantUML State">
+            </action>
+        </group>
+
+    </actions>
 </idea-plugin>
