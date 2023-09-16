@@ -1,7 +1,11 @@
 <!-- Keep a Changelog guide -> https://keepachangelog.com -->
 
-# meta-toolkit-plugin Changelog
+# metadata-toolkit-plugin Changelog
 
 ## [Unreleased]
+
+## [0.0.1] - 2021-09-01
+
 ### Added
-- Initial scaffold created from [IntelliJ Platform Plugin Template](https://github.com/JetBrains/intellij-platform-plugin-template)
+
+- Transform the LPP XML to plantUML State 
