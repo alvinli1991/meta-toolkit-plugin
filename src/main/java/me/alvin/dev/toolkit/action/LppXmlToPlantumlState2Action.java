@@ -23,7 +23,6 @@ import org.jetbrains.annotations.NotNull;
 import java.util.Objects;
 
 /**
- * @author: Li Xiang
  * Date: 2023/9/8
  * Time: 2:38 PM
  */

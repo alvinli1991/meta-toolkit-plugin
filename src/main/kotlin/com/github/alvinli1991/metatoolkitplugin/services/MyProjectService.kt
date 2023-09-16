@@ -1,9 +1,9 @@
 package com.github.alvinli1991.metatoolkitplugin.services
 
+import com.github.alvinli1991.metatoolkitplugin.MyBundle
 import com.intellij.openapi.components.Service
 import com.intellij.openapi.diagnostic.thisLogger
 import com.intellij.openapi.project.Project
-import com.github.alvinli1991.metatoolkitplugin.MyBundle
 
 @Service(Service.Level.PROJECT)
 class MyProjectService(project: Project) {

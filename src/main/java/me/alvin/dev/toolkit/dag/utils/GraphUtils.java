@@ -3,7 +3,6 @@ package me.alvin.dev.toolkit.dag.utils;
 import org.jgrapht.Graph;
 
 /**
- * @author: Li Xiang
  * Date: 2023/9/11
  * Time: 3:42 PM
  */

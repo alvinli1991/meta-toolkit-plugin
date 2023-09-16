@@ -9,13 +9,15 @@
     <resource-bundle>messages.MyBundle</resource-bundle>
 
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.alvinli1991.metatoolkitplugin.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
+        <toolWindow factoryClass="com.github.alvinli1991.metatoolkitplugin.toolWindow.MyToolWindowFactory"
+                    id="MyToolWindow"/>
 
         <projectService serviceInterface="me.alvin.dev.toolkit.dag.service.DagPlantumlStateService"
                         serviceImplementation="me.alvin.dev.toolkit.dag.service.impl.MsDagPlantumlStateService"/>
     </extensions>
 
     <applicationListeners>
-        <listener class="com.github.alvinli1991.metatoolkitplugin.listeners.MyApplicationActivationListener" topic="com.intellij.openapi.application.ApplicationActivationListener"/>
+        <listener class="com.github.alvinli1991.metatoolkitplugin.listeners.MyApplicationActivationListener"
+                  topic="com.intellij.openapi.application.ApplicationActivationListener"/>
     </applicationListeners>
 </idea-plugin>

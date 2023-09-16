@@ -4,7 +4,6 @@ import com.intellij.util.xml.Attribute;
 import com.intellij.util.xml.GenericAttributeValue;
 
 /**
- * @author: Li Xiang
  * Date: 2023/9/11
  * Time: 2:04 PM
  */
