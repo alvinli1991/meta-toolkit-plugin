@@ -1,6 +1,7 @@
 package com.github.alvinli1991.metadata.toolkit.dag.domain.common;
 
 import org.apache.commons.collections4.MapUtils;
+import org.apache.commons.lang3.StringUtils;
 
 import java.util.Collections;
 import java.util.HashMap;
@@ -20,9 +21,9 @@ public class Node {
 
 
     public Node(String id, String type, String desc) {
-        this.id = id;
-        this.type = type;
-        this.desc = desc;
+        this.id = StringUtils.trimToEmpty(id);
+        this.type = StringUtils.trimToEmpty(type);
+        this.desc = StringUtils.trimToEmpty(desc);
         this.data = new HashMap<>();
     }
 
@@ -49,7 +50,7 @@ public class Node {
     }
 
     public void setType(String type) {
-        this.type = type;
+        this.type = StringUtils.trimToEmpty(type);
     }
 
     public String getDesc() {
@@ -57,7 +58,7 @@ public class Node {
     }
 
     public void setDesc(String desc) {
-        this.desc = desc;
+        this.desc = StringUtils.trimToEmpty(desc);
     }
 
 

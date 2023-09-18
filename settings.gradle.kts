@@ -1,1 +1,1 @@
-rootProject.name = "meta-toolkit-plugin"
+rootProject.name = "metadata-toolkit-plugin"
