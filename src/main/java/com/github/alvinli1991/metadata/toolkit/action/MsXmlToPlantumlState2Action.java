@@ -3,7 +3,8 @@ package com.github.alvinli1991.metadata.toolkit.action;
 import com.github.alvinli1991.metadata.toolkit.dag.domain.common.LogicDag;
 import com.github.alvinli1991.metadata.toolkit.dag.domain.plantuml.StateUml;
 import com.github.alvinli1991.metadata.toolkit.dag.service.DagPlantumlStateService;
-import com.intellij.notification.NotificationGroupManager;
+import com.github.alvinli1991.metadata.toolkit.notification.MetadataToolkitNotifications;
+import com.intellij.lang.xml.XMLLanguage;
 import com.intellij.notification.NotificationType;
 import com.intellij.openapi.actionSystem.ActionUpdateThread;
 import com.intellij.openapi.actionSystem.AnAction;
@@ -41,14 +42,13 @@ public class MsXmlToPlantumlState2Action extends AnAction {
     @Override
     public void actionPerformed(@NotNull AnActionEvent event) {
         //读取选中的xml文件
-        Project project = event.getProject();
-        PsiFile psiFile = event.getData(CommonDataKeys.PSI_FILE);
+        Project project = event.getRequiredData(CommonDataKeys.PROJECT);
+        PsiFile psiFile = event.getRequiredData(CommonDataKeys.PSI_FILE);
         XmlFile xmlFile = (XmlFile) psiFile;
         DagPlantumlStateService dagPlantumlStateService = project.getService(DagPlantumlStateService.class);
         LogicDag logicDag = dagPlantumlStateService.parse(psiFile);
         if (null == logicDag) {
-            NotificationGroupManager.getInstance()
-                    .getNotificationGroup("Meta Data Toolkit")
+            MetadataToolkitNotifications.META_DATA_GROUP
                     .createNotification("File data can't be parsed", NotificationType.ERROR)
                     .notify(project);
             return;
@@ -73,8 +73,7 @@ public class MsXmlToPlantumlState2Action extends AnAction {
                 document.setText(statePlantUml);
             }
 
-            NotificationGroupManager.getInstance()
-                    .getNotificationGroup("Meta Data Toolkit")
+            MetadataToolkitNotifications.META_DATA_GROUP
                     .createNotification("PlantUML state generated", NotificationType.INFORMATION)
                     .notify(project);
         });
@@ -83,9 +82,9 @@ public class MsXmlToPlantumlState2Action extends AnAction {
     @Override
     public void update(@NotNull AnActionEvent event) {
         super.update(event);
-        Project project = event.getProject();
+        Project project = event.getData(CommonDataKeys.PROJECT);
         PsiFile psiFile = event.getData(CommonDataKeys.PSI_FILE);
-        boolean canProcess = project.getService(DagPlantumlStateService.class).canProcess(psiFile);
+        boolean canProcess = project != null && psiFile != null && (psiFile.getLanguage().is(XMLLanguage.INSTANCE));
         event.getPresentation().setEnabledAndVisible(canProcess);
     }
 }

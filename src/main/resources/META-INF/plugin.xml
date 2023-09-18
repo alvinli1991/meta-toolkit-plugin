@@ -1,10 +1,12 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <id>com.github.alvinli1991.metadata.toolkit</id>
-    <name>Meta Toolkit Template</name>
+    <name>Metadata Toolkit</name>
     <vendor>alvinli1991</vendor>
 
     <depends>com.intellij.modules.platform</depends>
+    <depends>PlantUML integration</depends>
+    <depends>com.intellij.modules.java</depends>
 
     <resource-bundle>messages.MyBundle</resource-bundle>
 
@@ -31,7 +33,7 @@
                text="Metadata Toolkit"
                icon="ToolkitIcons.M_icon"
                popup="true">
-            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
             <add-to-group group-id="ProjectViewPopupMenu" anchor="last"/>
             <action id="com.github.alvinli1991.metadata.toolkit.action.MsXmlToPlantumlState2Action"
                     class="com.github.alvinli1991.metadata.toolkit.action.MsXmlToPlantumlState2Action"
@@ -39,7 +41,14 @@
                     icon="ToolkitIcons.L_icon"
                     description="Transfer xml to plantUML State">
             </action>
+            <action id="com.github.alvinli1991.metadata.toolkit.action.PlantumlNaviToClassAction"
+                    class="com.github.alvinli1991.metadata.toolkit.action.PlantumlNaviToClassAction"
+                    text="Navi To Class"
+                    icon="ToolkitIcons.N_icon"
+                    description="Navi to the Java class file if possible">
+            </action>
         </group>
+
 
     </actions>
 </idea-plugin>

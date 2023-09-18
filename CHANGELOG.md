@@ -4,8 +4,14 @@
 
 ## [Unreleased]
 
-## [0.0.1] - 2021-09-01
+## [0.0.1] - 2023-09-17
 
 ### Added
 
 - Transform the LPP XML to plantUML State 
+
+## [0.0.2] - 2023-09-18
+
+### Added
+
+- jump to Class file in puml file 

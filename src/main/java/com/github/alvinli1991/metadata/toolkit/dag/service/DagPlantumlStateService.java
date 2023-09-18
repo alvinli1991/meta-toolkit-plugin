@@ -24,14 +24,6 @@ public interface DagPlantumlStateService {
 
 
     /**
-     * should process this file
-     *
-     * @param psiFile
-     * @return
-     */
-    boolean canProcess(PsiFile psiFile);
-
-    /**
      * parse file to DAG
      *
      * @param psiFile

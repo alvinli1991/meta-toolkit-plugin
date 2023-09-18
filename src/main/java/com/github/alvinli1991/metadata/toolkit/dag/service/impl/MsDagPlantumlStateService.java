@@ -9,7 +9,6 @@ import com.github.alvinli1991.metadata.toolkit.dag.domain.ms.xml.Depend;
 import com.github.alvinli1991.metadata.toolkit.dag.domain.ms.xml.Stage;
 import com.github.alvinli1991.metadata.toolkit.dag.domain.ms.xml.Unit;
 import com.github.alvinli1991.metadata.toolkit.dag.service.DagPlantumlStateService;
-import com.intellij.lang.xml.XMLLanguage;
 import com.intellij.openapi.project.Project;
 import com.intellij.psi.PsiFile;
 import com.intellij.psi.xml.XmlFile;
@@ -31,11 +30,6 @@ public class MsDagPlantumlStateService implements DagPlantumlStateService {
         this.project = project;
     }
 
-
-    @Override
-    public boolean canProcess(PsiFile psiFile) {
-        return project != null && psiFile != null && (psiFile.getLanguage().is(XMLLanguage.INSTANCE));
-    }
 
     @Override
     public LogicDag parse(PsiFile psiFile) {

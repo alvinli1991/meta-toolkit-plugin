@@ -11,4 +11,5 @@ import javax.swing.*;
 public interface ToolkitIcons {
     Icon L_icon = IconLoader.getIcon("/icons/l.svg", ToolkitIcons.class);
     Icon M_icon = IconLoader.getIcon("/icons/m.svg", ToolkitIcons.class);
+    Icon N_icon = IconLoader.getIcon("/icons/n.svg", ToolkitIcons.class);
 }
