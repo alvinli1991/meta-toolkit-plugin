@@ -41,13 +41,15 @@
                     icon="ToolkitIcons.L_icon"
                     description="Transfer xml to plantUML State">
             </action>
-            <action id="com.github.alvinli1991.metadata.toolkit.action.PlantumlNaviToClassAction"
-                    class="com.github.alvinli1991.metadata.toolkit.action.PlantumlNaviToClassAction"
-                    text="Navi To Class"
-                    icon="ToolkitIcons.N_icon"
-                    description="Navi to the Java class file if possible">
-            </action>
         </group>
+
+        <action id="com.github.alvinli1991.metadata.toolkit.action.PlantumlNaviToClassAction"
+                class="com.github.alvinli1991.metadata.toolkit.action.PlantumlNaviToClassAction"
+                text="Navi To Class"
+                icon="ToolkitIcons.N_icon"
+                description="Navi to the Java class file if possible">
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+        </action>
 
 
     </actions>
