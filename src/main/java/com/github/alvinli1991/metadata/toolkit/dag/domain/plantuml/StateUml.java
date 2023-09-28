@@ -3,10 +3,7 @@ package com.github.alvinli1991.metadata.toolkit.dag.domain.plantuml;
 import lombok.*;
 import org.apache.commons.lang3.StringUtils;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -29,10 +26,20 @@ public class StateUml implements Plantuml {
         List<String> tokens = new ArrayList<>();
         tokens.add(PlantumlConstant.START_UML);
 
-        List<String> statesUml = Optional.ofNullable(getStates()).orElse(Collections.emptyList()).stream().map(State::toPlantuml).toList();
+        List<String> statesUml = Optional.ofNullable(getStates())
+                .orElse(Collections.emptyList())
+                .stream()
+                .filter(Objects::nonNull)
+                .map(State::toPlantuml)
+                .toList();
         tokens.addAll(statesUml);
 
-        List<String> stateRelationsUml = Optional.ofNullable(getStateRelations()).orElse(Collections.emptyList()).stream().map(StateRelation::toPlantuml).toList();
+        List<String> stateRelationsUml = Optional.ofNullable(getStateRelations())
+                .orElse(Collections.emptyList())
+                .stream()
+                .filter(Objects::nonNull)
+                .map(StateRelation::toPlantuml)
+                .toList();
         tokens.addAll(stateRelationsUml);
         tokens.add(PlantumlConstant.END_UML + "\n");
 

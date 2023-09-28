@@ -7,4 +7,6 @@ package com.github.alvinli1991.metadata.toolkit.dag.domain.plantuml;
 public class PlantumlConstant {
     public static final String START_UML = "@startuml";
     public static final String END_UML = "@enduml";
+
+    public static final String OUTPUTS_TAG = "outputs";
 }

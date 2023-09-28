@@ -35,6 +35,14 @@ public class StateRelation implements Plantuml {
         if (Objects.nonNull(to)) {
             tokens.add(getTo().getName());
         }
+        if (Objects.nonNull(from)) {
+            from.getDescValue(PlantumlConstant.OUTPUTS_TAG)
+                    .ifPresent(output -> {
+                        if (StringUtils.isNotBlank(output)) {
+                            tokens.add(StatePlantumlConstant.TOKEN_COLON + output);
+                        }
+                    });
+        }
         return String.join(" ", tokens);
     }
 }

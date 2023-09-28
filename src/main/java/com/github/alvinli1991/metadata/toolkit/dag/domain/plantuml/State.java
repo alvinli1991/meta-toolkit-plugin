@@ -33,6 +33,11 @@ public class State implements Plantuml {
                 .collect(Collectors.toList());
     }
 
+    public Optional<String> getDescValue(String key) {
+        return Optional.ofNullable(descriptions)
+                .map(desc -> desc.get(key));
+    }
+
     public String buildStart() {
         List<String> tokens = new ArrayList<>();
         tokens.add(StatePlantumlConstant.TOKEN_STATE);
@@ -64,7 +69,9 @@ public class State implements Plantuml {
         }
         tokens.addAll(Optional.ofNullable(children)
                 .orElse(Collections.emptyList())
-                .stream().map(State::toPlantuml)
+                .stream()
+                .filter(Objects::nonNull)
+                .map(State::toPlantuml)
                 .toList());
         tokens.add(buildEnd());
         return String.join("\n", tokens);

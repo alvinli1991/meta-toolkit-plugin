@@ -10,4 +10,6 @@ public class StatePlantumlConstant {
     public static final String TOKEN_END_BRACE = "}";
     public static final String TOKEN_RELATION = "-->";
 
+    public static final String TOKEN_COLON = ":";
+
 }

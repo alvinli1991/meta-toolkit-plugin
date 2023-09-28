@@ -54,7 +54,7 @@ public class Node {
     }
 
     public String getDesc() {
-        return desc;
+        return StringUtils.trimToEmpty(desc);
     }
 
     public void setDesc(String desc) {

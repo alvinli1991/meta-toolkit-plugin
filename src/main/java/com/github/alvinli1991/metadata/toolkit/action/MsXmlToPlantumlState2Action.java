@@ -54,6 +54,13 @@ public class MsXmlToPlantumlState2Action extends AnAction {
             return;
         }
 
+        if (dagPlantumlStateService.hasCycle(logicDag)) {
+            MetadataToolkitNotifications.META_DATA_GROUP
+                    .createNotification("DAG存在圆环", NotificationType.ERROR)
+                    .notify(project);
+            return;
+        }
+
         StateUml stateUml = dagPlantumlStateService.buildPlantumlState(logicDag);
 
         //save to file

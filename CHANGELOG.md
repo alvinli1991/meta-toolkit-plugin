@@ -8,10 +8,11 @@
 
 ### Added
 
-- Transform the LPP XML to plantUML State 
+- Transform the XML to plantUML State
 
-## [0.0.2] - 2023-09-18
+## [0.0.2] - 2023-09-28
 
 ### Added
 
-- jump to Class file in puml file 
+- Jump to Class file in puml file
+- Transform the tf py to plantUML State  
