@@ -26,12 +26,17 @@
                 rootTagName="DagGraph"/>
 
         <notificationGroup id="Meta Data Toolkit" displayType="BALLOON" key="projectService"/>
+        <httpRequestHandler implementation="com.github.alvinli1991.metadata.toolkit.api.http.JumpToHttpService"/>
     </extensions>
 
     <applicationListeners>
         <listener class="com.github.alvinli1991.metadata.toolkit.listeners.MyApplicationActivationListener"
                   topic="com.intellij.openapi.application.ApplicationActivationListener"/>
     </applicationListeners>
+    <projectListeners>
+        <listener class="com.github.alvinli1991.metadata.toolkit.listener.JumpToListener"
+                  topic="com.github.alvinli1991.metadata.toolkit.message.JumpToNotifier"/>
+    </projectListeners>
     <actions>
         <group id="me.alvin.dev.toolkit.MetadataGroupedActions"
                text="Metadata Toolkit"
